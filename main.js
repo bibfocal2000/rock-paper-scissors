@@ -46,3 +46,25 @@ const playRound = (computerPlay, playerPlay) => {
     return `${playerInput} is not an option`;
   }
 };
+
+//* A function with a while loop so that the player can decide how many rounds to play.
+//* The loop will stop at the moment either player has reached half of the rounds chosen plus 1. just like in sports, if playing best of 7, then the first team to reach 4 ends the series as the champion. There would be no point in continueing because the other team can only win 3 games.
+//* Returns who is the winner of the series or best of n.
+const game = () => {
+  while (true) {
+    if (computerScore == bestOf || playerScore == bestOf) {
+      break;
+    } else {
+      console.log(playRound(computerPlay, playerPlay));
+      console.log(bestOf);
+      console.log(`Player: ${playerScore} Rounds ${rounds}`);
+      console.log(`Computer: ${computerScore} Rounds ${rounds}`);
+    }
+  }
+
+  if (computerScore > playerScore) {
+    return `Computer is the CHAMPION by winning ${computerScore} out of ${rounds} games`;
+  } else if (playerScore >= computerScore) {
+    return `You are the CHAMPION by winning ${playerScore} out of ${rounds} games`;
+  }
+};
