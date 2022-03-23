@@ -68,3 +68,12 @@ const game = () => {
     return `You are the CHAMPION by winning ${playerScore} out of ${rounds} games`;
   }
 };
+
+//* Variables
+let rounds = 10;
+let bestOf = Math.floor(rounds / 2 + 1);
+let computerScore = 0;
+let playerScore = 0;
+
+//* Play the game of rock, paper, scissors
+console.log(game());
