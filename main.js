@@ -56,9 +56,9 @@ const game = () => {
       break;
     } else {
       console.log(playRound(computerPlay, playerPlay));
-      console.log(bestOf);
-      console.log(`Player: ${playerScore} Rounds ${rounds}`);
-      console.log(`Computer: ${computerScore} Rounds ${rounds}`);
+      // console.log(bestOf);
+      // console.log(`Player: ${playerScore} Rounds ${rounds}`);
+      // console.log(`Computer: ${computerScore} Rounds ${rounds}`);
     }
   }
 
@@ -70,7 +70,7 @@ const game = () => {
 };
 
 //* Variables
-let rounds = 10;
+let rounds = 5;
 let bestOf = Math.floor(rounds / 2 + 1);
 let computerScore = 0;
 let playerScore = 0;
